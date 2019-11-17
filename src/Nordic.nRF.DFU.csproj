@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
   </PropertyGroup>
 
   <ItemGroup>
