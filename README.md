@@ -1,6 +1,6 @@
 # nRF DFU
 
-[![License](https://img.shields.io/badge/license-Modified%20BSD%20License-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-Proprietary%2FMIT-blue)](LICENSE)
 
 `pc-nrf-dfu-cs` is a C# module which provides DFU (Device Firmware Upgrade) via Serial UART / USB CDC ACM transport for Nordic devices.
 
