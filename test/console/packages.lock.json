@@ -2,15 +2,6 @@
   "version": 1,
   "dependencies": {
     ".NETCoreApp,Version=v2.2": {
-      "Google.Protobuf": {
-        "type": "Direct",
-        "requested": "[3.10.1, )",
-        "resolved": "3.10.1",
-        "contentHash": "SAmoXQYigTD/SY3bItKVCccGiOjMNjn31Hug2R17QMbhQHGy5/9XncEqbEmNYK8MjEMk6RZfuTtL1HyjEAJH4g==",
-        "dependencies": {
-          "System.Memory": "4.5.2"
-        }
-      },
       "Microsoft.NETCore.App": {
         "type": "Direct",
         "requested": "[2.2.7, )",
@@ -35,37 +26,25 @@
         "resolved": "3.0.0",
         "contentHash": "WOwoFoWQ+/njjM0pKbnkKTBo8q3NphEOtu1zMXbqRoWsI07JSXWSycgN3cdM+NlhkXxH4TNEFtI5Pjm94N6DLw=="
       },
-      "Newtonsoft.Json": {
+      "System.Console": {
         "type": "Direct",
-        "requested": "[12.0.2, )",
-        "resolved": "12.0.2",
-        "contentHash": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA=="
-      },
-      "System.IO.Compression.ZipFile": {
-        "type": "Direct",
-        "requested": "[4.3.0, )",
-        "resolved": "4.3.0",
-        "contentHash": "gg9yM7N8I3e2Rd/AckRbPfWeN6Dre5ICEeydFVLE7BIkqXJfdil9HCtRLJuIhVq/DUVlYxyAU4i2Zf5wCyFchw==",
+        "requested": "[4.3.1, )",
+        "resolved": "4.3.1",
+        "contentHash": "6iKDG36vugpW230eBGMLL6GQIx+Buf5txz6DFC1c4MOH8qcOo2mFzId6GsJUTptR4AusnDsdUeCYuzDiftD39w==",
         "dependencies": {
-          "System.Buffers": "4.3.0",
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.2",
           "System.IO": "4.3.0",
-          "System.IO.Compression": "4.3.0",
-          "System.IO.FileSystem": "4.3.0",
-          "System.IO.FileSystem.Primitives": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
           "System.Text.Encoding": "4.3.0"
         }
       },
-      "System.IO.Ports": {
-        "type": "Direct",
-        "requested": "[4.6.0, )",
-        "resolved": "4.6.0",
-        "contentHash": "9mh48ySrW31fi8JZdcXSKKSrtCH/ZgRkpOMYWwmN//KtCFGIgsyjxpft2wRKlGW/YHG70SG6Xsr/TCLf53fQOA==",
+      "Google.Protobuf": {
+        "type": "Transitive",
+        "resolved": "3.10.1",
+        "contentHash": "SAmoXQYigTD/SY3bItKVCccGiOjMNjn31Hug2R17QMbhQHGy5/9XncEqbEmNYK8MjEMk6RZfuTtL1HyjEAJH4g==",
         "dependencies": {
-          "Microsoft.Win32.Registry": "4.6.0",
-          "runtime.native.System.IO.Ports": "4.6.0"
+          "System.Memory": "4.5.2"
         }
       },
       "Microsoft.NETCore.DotNetAppHost": {
@@ -105,6 +84,11 @@
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
+      },
+      "Newtonsoft.Json": {
+        "type": "Transitive",
+        "resolved": "12.0.2",
+        "contentHash": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA=="
       },
       "runtime.linux-arm.runtime.native.System.IO.Ports": {
         "type": "Transitive",
@@ -241,6 +225,22 @@
           "runtime.native.System.IO.Compression": "4.3.0"
         }
       },
+      "System.IO.Compression.ZipFile": {
+        "type": "Transitive",
+        "resolved": "4.3.0",
+        "contentHash": "gg9yM7N8I3e2Rd/AckRbPfWeN6Dre5ICEeydFVLE7BIkqXJfdil9HCtRLJuIhVq/DUVlYxyAU4i2Zf5wCyFchw==",
+        "dependencies": {
+          "System.Buffers": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.Compression": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.Encoding": "4.3.0"
+        }
+      },
       "System.IO.FileSystem": {
         "type": "Transitive",
         "resolved": "4.3.0",
@@ -262,6 +262,15 @@
         "contentHash": "K2P1Tx9WMkedhgm/Kc9AcT1bDZ24P8junNxdSnVZpo8xsQ3JmGflQbIkwrhDIZnDCpigNQhuU1nsI3aLgvtQNw==",
         "dependencies": {
           "System.Runtime": "4.3.0"
+        }
+      },
+      "System.IO.Ports": {
+        "type": "Transitive",
+        "resolved": "4.6.0",
+        "contentHash": "9mh48ySrW31fi8JZdcXSKKSrtCH/ZgRkpOMYWwmN//KtCFGIgsyjxpft2wRKlGW/YHG70SG6Xsr/TCLf53fQOA==",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.6.0",
+          "runtime.native.System.IO.Ports": "4.6.0"
         }
       },
       "System.Memory": {
@@ -389,6 +398,17 @@
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "Nordic.nRF.DFU": {
+        "type": "Project",
+        "dependencies": {
+          "Google.Protobuf": "3.10.1",
+          "Microsoft.NETCore.Platforms": "3.0.0",
+          "Microsoft.NETCore.Targets": "3.0.0",
+          "Newtonsoft.Json": "12.0.2",
+          "System.IO.Compression.ZipFile": "4.3.0",
+          "System.IO.Ports": "4.6.0"
         }
       }
     }
