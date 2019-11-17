@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nordic.nRF.DFU", "src\Nordic.nRF.DFU.csproj", "{73B90834-80D3-45D6-B3DC-6D04931656EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nordic.nRF.DFU.Console", "test\console\Nordic.nRF.DFU.Console.csproj", "{8D45038F-1BAC-45A9-B36B-E4DCD0EFB342}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extras", "Extras", "{45E6870C-EDE5-45F7-957A-C3D7BA101304}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		build.fsx = build.fsx
+		fake.cmd = fake.cmd
+		fake.sh = fake.sh
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73B90834-80D3-45D6-B3DC-6D04931656EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73B90834-80D3-45D6-B3DC-6D04931656EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B90834-80D3-45D6-B3DC-6D04931656EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73B90834-80D3-45D6-B3DC-6D04931656EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D45038F-1BAC-45A9-B36B-E4DCD0EFB342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D45038F-1BAC-45A9-B36B-E4DCD0EFB342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D45038F-1BAC-45A9-B36B-E4DCD0EFB342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D45038F-1BAC-45A9-B36B-E4DCD0EFB342}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53FBDD02-CE2D-47A3-BD98-C45C6C7AB172}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "Nordic.nRF.DFU.Console": {
+      "commandName": "Project"
+    }
+  }
+}

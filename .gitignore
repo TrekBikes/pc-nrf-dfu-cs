@@ -1,0 +1,12 @@
+﻿# FAKE build artifacts
+/.fake
+
+# Ionide Helpers
+/.ionide
+
+# Visual Studio Stuff
+/.vs
+
+# Binaries
+/**/bin
+/**/obj
