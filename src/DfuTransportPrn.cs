@@ -175,7 +175,7 @@ namespace Nordic.nRF.DFU
         // then returns an array of the form [opcode, payload] if the
         // operation was sucessful.
         // If there were any errors, returns a rejected Promise with an error message.
-        protected virtual async Task<Tuple<byte, byte[]>> Parse(byte[] bytes)
+        protected virtual Task<Tuple<byte, byte[]>> Parse(byte[] bytes)
         { // eslint-disable-line class-methods-use-this
             if (bytes == null || bytes.Length <= 0 || bytes[0] != 0x60)
             {
@@ -187,7 +187,7 @@ namespace Nordic.nRF.DFU
             if (resultCode == ErrorCode.ERROR_MESSAGE_RSP)
             {
                 System.Diagnostics.Debug.WriteLine($"Parsed DFU response packet: opcode {opcode} payload: {BitConverter.ToString(bytes.Take(3).ToArray())}");
-                return Tuple.Create(opcode, bytes.Skip(3).ToArray());
+                return Task.FromResult(Tuple.Create(opcode, bytes.Skip(3).ToArray()));
             }
 
             var errorCode = ErrorCode.ERROR_MESSAGE;
