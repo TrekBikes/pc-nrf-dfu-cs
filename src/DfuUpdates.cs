@@ -102,7 +102,12 @@ namespace Nordic.nRF.DFU
          */
         public static async Task<DfuUpdates> FromZipFile(string zipFilePath)
         {
+            #if NETCORE
             var fileBytes = await System.IO.File.ReadAllBytesAsync(zipFilePath);
+            #else
+            var fileBytes = System.IO.File.ReadAllBytes(zipFilePath);
+            #endif
+
             return await FromZipFile(fileBytes);
         }
 
