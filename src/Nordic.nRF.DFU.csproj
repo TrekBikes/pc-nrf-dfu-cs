@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>library</OutputType>
-    <TargetFrameworks>netcoreapp2.2;netstandard2.0;net461</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.2;netstandard2.0;net461;net45</TargetFrameworks>
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
@@ -17,12 +17,16 @@
     <DefineConstants>NETCORE</DefineConstants>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <DefineConstants>NET45</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.2' or '$(TargetFramework)' == 'netstandard2.0' ">
     <PackageReference Include="Microsoft.NETCore.Platforms" Version="3.0.0" />
     <PackageReference Include="Microsoft.NETCore.Targets" Version="3.0.0" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">		
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' or  '$(TargetFramework)' == 'net45' ">		
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -34,8 +38,10 @@
   <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.10.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-    <PackageReference Include="System.IO.Compression.ZipFile" Version="4.3.0" />
-    <PackageReference Include="System.IO.Ports" Version="4.6.0" />
   </ItemGroup>
 
+  <ItemGroup Condition="'$(TargetFramework)' != 'net45'">
+    <PackageReference Include="System.IO.Ports" Version="4.6.0" />
+    <PackageReference Include="System.IO.Compression.ZipFile" Version="4.3.0" />
+  </ItemGroup>
 </Project>
