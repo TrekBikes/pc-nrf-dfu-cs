@@ -89,7 +89,7 @@ namespace Nordic.nRF.DFU
         protected virtual async Task SendPayload(byte type, byte[] bytes, bool resumeAtChunkBoundary = false)
         {
             System.Diagnostics.Debug.WriteLine($"Sending payload of type {type}");
-            var selectedObject = await SelectObject(type);
+            var selectedObject = await this.AwaitAndCheckException(SelectObject(type));
             var offset = selectedObject.Item1;
             var crcSoFar = selectedObject.Item2;
             var chunkSize = selectedObject.Item3;
@@ -108,7 +108,7 @@ namespace Nordic.nRF.DFU
                         // Send an exec command, just in case the previous connection broke
                         // just before the exec command. An extra exec command will have no
                         // effect.
-                        await this.ExecuteObject();
+                        await this.AwaitAndCheckException(this.ExecuteObject());
                         return;
                     }
 
@@ -122,8 +122,8 @@ namespace Nordic.nRF.DFU
                         // and yet receive an "OK" response code.
                         System.Diagnostics.Debug.WriteLine($"Edge case: payload transferred up to page boundary; previous execute command might have been lost, re-sending.");
 
-                        await this.ExecuteObject();
-                        await this.SendPayload(type, bytes, true);
+                        await this.AwaitAndCheckException(this.ExecuteObject());
+                        await this.AwaitAndCheckException(this.SendPayload(type, bytes, true));
                         return;
                     }
 
@@ -132,10 +132,10 @@ namespace Nordic.nRF.DFU
                     // Send the remainder of a half-finished chunk
                     var chunkEnd = (uint)Math.Min(bytes.Length, (offset + chunkSize) - (offset % chunkSize));
 
-                    await this.SendAndExecutePayloadChunk(
+                    await this.AwaitAndCheckException(this.SendAndExecutePayloadChunk(
                         type, bytes, offset,
                         chunkEnd, chunkSize, crc
-                    );
+                    ));
 
                     return;
                 }
@@ -152,8 +152,8 @@ namespace Nordic.nRF.DFU
 
             var end = (uint)Math.Min(bytes.Length, chunkSize);
 
-            await this.CreateObject(type, end);
-            await this.SendAndExecutePayloadChunk(type, bytes, 0, end, chunkSize);
+            await this.AwaitAndCheckException(this.CreateObject(type, end));
+            await this.AwaitAndCheckException(this.SendAndExecutePayloadChunk(type, bytes, 0, end, chunkSize));
         }
 
 
@@ -284,5 +284,8 @@ namespace Nordic.nRF.DFU
 
         // Abort bootloader mode and try to switch back to app mode
         protected abstract Task AbortObject();
+
+        // Records the last exception to occur during the current operation
+        protected internal DfuException LastException { get; set; }
     }
 }

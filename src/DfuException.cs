@@ -266,10 +266,16 @@ namespace Nordic.nRF.DFU
      */
     public class DfuException : Exception
     {
-        public DfuException(ErrorCode code, string message = null)
-            : base(DfuException.GetErrorMessage(code) + (String.IsNullOrWhiteSpace(message) ? String.Empty : $" {message}"))
+        public DfuException(ErrorCode code, string message = null, Exception innerException = null)
+            : base(DfuException.GetErrorMessage(code) + (String.IsNullOrWhiteSpace(message) ? String.Empty : $" {message}"), innerException)
         {
             this.Code = code;
+        }
+
+        public DfuException(DfuException ex, Exception innerException)
+            : base(ex.Message, innerException)
+        {
+            this.Code = ex.Code;
         }
 
         public ErrorCode Code { get; private set; }

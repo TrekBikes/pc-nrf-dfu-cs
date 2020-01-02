@@ -186,16 +186,29 @@ namespace Nordic.nRF.DFU
         // Called only internally.
         private async void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            if (e.EventType != SerialData.Eof)
+            try
             {
-                if (_serialPort.BytesToRead > 0)
+                if (e.EventType != SerialData.Eof)
                 {
-                    var bytes = new byte[_serialPort.BytesToRead];
-                    if (_serialPort.Read(bytes, 0, bytes.Length) > 0)
+                    if (_serialPort.BytesToRead > 0)
                     {
-                        await _decoder.DecodeBytes(bytes);
+                        var bytes = new byte[_serialPort.BytesToRead];
+                        if (_serialPort.Read(bytes, 0, bytes.Length) > 0)
+                        {
+                            await _decoder.DecodeBytes(bytes);
+                        }
                     }
                 }
+            }
+            catch (DfuException ex)
+            {
+                // just assign last exception and continue, calling code will pick this up
+                this.LastException = ex;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Fatal Exception During Serial Data Receive: {ex.Message}: {ex.StackTrace}");
+                throw ex;
             }
         }
 
