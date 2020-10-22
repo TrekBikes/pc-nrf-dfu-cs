@@ -1,7 +1,7 @@
 {
   "version": 1,
   "dependencies": {
-    ".NETCoreApp,Version=v2.2": {
+    ".NETCoreApp,Version=v2.1": {
       "Google.Protobuf": {
         "type": "Direct",
         "requested": "[3.10.1, )",
@@ -13,12 +13,12 @@
       },
       "Microsoft.NETCore.App": {
         "type": "Direct",
-        "requested": "[2.2.8, )",
-        "resolved": "2.2.8",
-        "contentHash": "GOxlvyc8hFrnhDjYlm25JJ7PwoyeoOpZzcg6ZgF8n8l6VxezNupRkkTeA2ek1WsspN0CdAoA8e7iDVNU84/F+Q==",
+        "requested": "[2.1.20, )",
+        "resolved": "2.1.20",
+        "contentHash": "lT/Dm1FJ+XH+ryC4KcupTT4ieF8gRp/8bo/lIGRawD1SpH5excC985EYpV1xTCP30TL2i76wMTyAoT2z0lHycg==",
         "dependencies": {
-          "Microsoft.NETCore.DotNetHostPolicy": "2.2.8",
-          "Microsoft.NETCore.Platforms": "2.2.4",
+          "Microsoft.NETCore.DotNetHostPolicy": "2.1.20",
+          "Microsoft.NETCore.Platforms": "2.1.9",
           "Microsoft.NETCore.Targets": "2.0.0",
           "NETStandard.Library": "2.0.3"
         }
@@ -70,23 +70,23 @@
       },
       "Microsoft.NETCore.DotNetAppHost": {
         "type": "Transitive",
-        "resolved": "2.2.8",
-        "contentHash": "Lh1F6z41levvtfC3KuuiQe9ppWKRP1oIB42vP1QNQE4uumo95h+LpjPDeysX1DlTjCzG0BVGSUEpCW5fHkni7w=="
+        "resolved": "2.1.20",
+        "contentHash": "O3sCU2S6nSbHD/HiPuLMwho9FWzQiRFbTQp2v50U4gNBQ+IzmrgTur+H7fnFR0ZQL8ZYgA0m8ZxkNSPYlDI9Iw=="
       },
       "Microsoft.NETCore.DotNetHostPolicy": {
         "type": "Transitive",
-        "resolved": "2.2.8",
-        "contentHash": "rOHr0Dk87vaiq9d1hMpXETB4IKq1jIiPQlVKNUjRGilK/cjOcadhsk+1MsrJ/GnM3eovhy8zW2PGkN8pYEolnw==",
+        "resolved": "2.1.20",
+        "contentHash": "XXS9AnTn4uXF3dkrvIc19p+c+q3u4HHZbCVyYsxJIJ1t97gLnncC35U8u4TrI/E9DL2JV1C/WiihsWf6aGVJUA==",
         "dependencies": {
-          "Microsoft.NETCore.DotNetHostResolver": "2.2.8"
+          "Microsoft.NETCore.DotNetHostResolver": "2.1.20"
         }
       },
       "Microsoft.NETCore.DotNetHostResolver": {
         "type": "Transitive",
-        "resolved": "2.2.8",
-        "contentHash": "culLr+x2GvUkXVGi4ULZ7jmWJEhuAMyS7iTWBlkWnqbKtYJ36ZlgHbw/6qTm82790gJemEFeo9RehDwfRXfJzA==",
+        "resolved": "2.1.20",
+        "contentHash": "Zcqpi7t11IyxA22S413yeBIRNkSIrNTXoBO5oXqSuKuqc2ffR/ihZkGEtPTvXn3dIXaq75H0whRHODB8pdFX5w==",
         "dependencies": {
-          "Microsoft.NETCore.DotNetAppHost": "2.2.8"
+          "Microsoft.NETCore.DotNetAppHost": "2.1.20"
         }
       },
       "Microsoft.Win32.Registry": {
