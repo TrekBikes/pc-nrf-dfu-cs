@@ -326,7 +326,7 @@ namespace Nordic.nRF.DFU
 
             // Decode little-endian fields, by using a DataView with the
             // same buffer *and* offset than the Uint8Array for the packet payload
-            var offset = BitConverter.ToUInt32(bytes);
+            var offset = BitConverter.ToUInt32(bytes, 0);
             var crc = BitConverter.ToUInt32(bytes, 4);
 
             return Tuple.Create(offset, crc);

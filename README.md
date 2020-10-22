@@ -4,7 +4,7 @@
 
 `pc-nrf-dfu-cs` is a C# module which provides DFU (Device Firmware Upgrade) via Serial UART / USB CDC ACM transport for Nordic devices.
 
-This module is a .NET Core 2.x library and was adapted from [`pc-nrf-dfu-js`](https://github.com/NordicSemiconductor/pc-nrf-dfu-js) and is designed to provide DFU capabilities to .NET applications.
+This module is multi-targeted .NET library and was adapted from [`pc-nrf-dfu-js`](https://github.com/NordicSemiconductor/pc-nrf-dfu-js) and is designed to provide DFU capabilities to .NET applications.
 
 The following devices are supported:
 
