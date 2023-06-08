@@ -140,8 +140,8 @@ namespace Nordic.nRF.DFU
             }
             finally
             {
-                _waitingForPacket.Dispose();
-                _waitingForPacket = null;
+                this._waitingForPacket.Dispose();
+                this._waitingForPacket = null;
             }
 
             if (this._lastReceivedPacket != null)

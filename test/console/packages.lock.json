@@ -4,12 +4,12 @@
     ".NETCoreApp,Version=v2.1": {
       "Microsoft.NETCore.App": {
         "type": "Direct",
-        "requested": "[2.1.20, )",
-        "resolved": "2.1.20",
-        "contentHash": "lT/Dm1FJ+XH+ryC4KcupTT4ieF8gRp/8bo/lIGRawD1SpH5excC985EYpV1xTCP30TL2i76wMTyAoT2z0lHycg==",
+        "requested": "[2.1.30, )",
+        "resolved": "2.1.30",
+        "contentHash": "Hs73dGereVEUeE0f9nGgNrTgESyhm/41pQ3gIW7P/Bwv8yBJwsw8T0Yb40uessXNU6HcfZstudf70+yaHHK/sw==",
         "dependencies": {
-          "Microsoft.NETCore.DotNetHostPolicy": "2.1.20",
-          "Microsoft.NETCore.Platforms": "2.1.9",
+          "Microsoft.NETCore.DotNetHostPolicy": "2.1.30",
+          "Microsoft.NETCore.Platforms": "2.1.14",
           "Microsoft.NETCore.Targets": "2.0.0",
           "NETStandard.Library": "2.0.3"
         }
@@ -49,23 +49,23 @@
       },
       "Microsoft.NETCore.DotNetAppHost": {
         "type": "Transitive",
-        "resolved": "2.1.20",
-        "contentHash": "O3sCU2S6nSbHD/HiPuLMwho9FWzQiRFbTQp2v50U4gNBQ+IzmrgTur+H7fnFR0ZQL8ZYgA0m8ZxkNSPYlDI9Iw=="
+        "resolved": "2.1.30",
+        "contentHash": "rbRBSaCEWZfVMVum2OulEELLjFWmiLmJIxeuODOUPgMuDXses4OOc/iQUf8qzNpWCRVGlYXQ0eV1m4Ic1RfVCA=="
       },
       "Microsoft.NETCore.DotNetHostPolicy": {
         "type": "Transitive",
-        "resolved": "2.1.20",
-        "contentHash": "XXS9AnTn4uXF3dkrvIc19p+c+q3u4HHZbCVyYsxJIJ1t97gLnncC35U8u4TrI/E9DL2JV1C/WiihsWf6aGVJUA==",
+        "resolved": "2.1.30",
+        "contentHash": "0NCIUV9mlKQeIKnX6UzVvPAFFlqJKxLXmrk3/X7sMSNuX/9JpxleICmkTsHGdDQSoLiUz087pN6UvQinu3btzA==",
         "dependencies": {
-          "Microsoft.NETCore.DotNetHostResolver": "2.1.20"
+          "Microsoft.NETCore.DotNetHostResolver": "2.1.30"
         }
       },
       "Microsoft.NETCore.DotNetHostResolver": {
         "type": "Transitive",
-        "resolved": "2.1.20",
-        "contentHash": "Zcqpi7t11IyxA22S413yeBIRNkSIrNTXoBO5oXqSuKuqc2ffR/ihZkGEtPTvXn3dIXaq75H0whRHODB8pdFX5w==",
+        "resolved": "2.1.30",
+        "contentHash": "4kf9/unrbokd9+gsM6pU/eoHfz9yhGXU2pTSDWLQzhYHfOZuBjT0Ky+GVQzy4AOkxX5hw+lVLYsDXpFgCCZroQ==",
         "dependencies": {
-          "Microsoft.NETCore.DotNetAppHost": "2.1.20"
+          "Microsoft.NETCore.DotNetAppHost": "2.1.30"
         }
       },
       "Microsoft.Win32.Registry": {
@@ -403,12 +403,12 @@
       "nordic.nrf.dfu": {
         "type": "Project",
         "dependencies": {
-          "Google.Protobuf": "3.10.1",
-          "Microsoft.NETCore.Platforms": "3.0.0",
-          "Microsoft.NETCore.Targets": "3.0.0",
-          "Newtonsoft.Json": "12.0.2",
-          "System.IO.Compression.ZipFile": "4.3.0",
-          "System.IO.Ports": "4.6.0"
+          "Google.Protobuf": "[3.10.1, )",
+          "Microsoft.NETCore.Platforms": "[3.0.0, )",
+          "Microsoft.NETCore.Targets": "[3.0.0, )",
+          "Newtonsoft.Json": "[12.0.2, )",
+          "System.IO.Compression.ZipFile": "[4.3.0, )",
+          "System.IO.Ports": "[4.6.0, )"
         }
       }
     },
@@ -770,12 +770,12 @@
       "nordic.nrf.dfu": {
         "type": "Project",
         "dependencies": {
-          "Google.Protobuf": "3.10.1",
-          "Microsoft.NETCore.Platforms": "3.1.3",
-          "Microsoft.NETCore.Targets": "3.1.0",
-          "Newtonsoft.Json": "12.0.2",
-          "System.IO.Compression.ZipFile": "4.3.0",
-          "System.IO.Ports": "4.6.0"
+          "Google.Protobuf": "[3.10.1, )",
+          "Microsoft.NETCore.Platforms": "[3.1.3, )",
+          "Microsoft.NETCore.Targets": "[3.1.0, )",
+          "Newtonsoft.Json": "[12.0.2, )",
+          "System.IO.Compression.ZipFile": "[4.3.0, )",
+          "System.IO.Ports": "[4.6.0, )"
         }
       }
     }
